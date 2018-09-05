@@ -4,6 +4,37 @@ import pandas as pd #redundant from DataFrameN
 import pickle
 from DataFrameN import *
 
+#biomart tsv's downloaded from http://useast.ensembl.org
+_biomart = {
+    'genes': pd.read_csv('biomart_genes.tsv', sep='\t', index_col=0),
+    'transcripts': pd.read_csv('biomart_isoforms.tsv', sep='\t', index_col=0)
+}
+
+def gene_name(ensembl):
+    """
+Returns a readable gene name for the given EnsemblID. Returns None if not known.
+    """
+    if type(ensembl) in [list, tuple, _GEN]:
+        return [gene_name(i) for i in ensembl]
+    
+    try:
+        return _biomart['genes'].loc[ensembl][0]
+    except KeyError:
+        return None
+    
+    
+def isoform_name(ensembl):
+    """
+Returns a readable isoform name for the given EnsemblID. Returns None if not known.
+    """
+    if type(ensembl) in [list, tuple, _GEN]:
+        return [isoform_name(i) for i in ensembl]
+    
+    try:
+        return _biomart['transcripts'].loc[ensembl][0]
+    except KeyError:
+        return None
+
 for i in range(1,49):
     genes = pd.read_csv('heat_stroke/mapped/'+str(i)+'.genes.results', sep='\t', usecols=[0,5], index_col=0)
     genes.columns = [i+48]
