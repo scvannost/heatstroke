@@ -1,5 +1,5 @@
 # heatstroke
-Code in support of my heat stroke project research i.s.m. USARIEM
+Code in support of my heat stroke project research under Dr. Doug Lauffenburger i.s.m. Dr. Elizabeth Proctor and USARIEM
 
 ## Methods
 1. Raw RNAseq reads moved to cluster:\~/data/fastq/ as fastq files.
