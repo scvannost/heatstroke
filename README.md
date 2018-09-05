@@ -11,15 +11,15 @@ Code in support of my heat stroke project research i.s.m. USARIEM
 7. Run zscored.py to zscore the data, then run relevant sections of log2scaled.py for handmade analysis
 
 ### Other files
-helpers.py -> a file that makes all the imports needed to run log2scaled.py
+helpers.py -> a file that makes all the imports needed to run log2scaled.py  
 mice.json -> a hand-coded JSON object specifying the experimental groups for each mouse
 
 ### Files to download
-ftp://ftp.ensembl.org/pub/release-93/gtf/mus_musculus/Mus_musculus.GRCm38.93.gtf.gz to cluster:\~/data/
-ftp://ftp.ensembl.org/pub/release-93/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna.toplevel.fa.gz to cluster:\~/data/
-All genes from http://useast.ensembl.org to biomart_genes.tsv
+ftp://ftp.ensembl.org/pub/release-93/gtf/mus_musculus/Mus_musculus.GRCm38.93.gtf.gz to cluster:\~/data/  
+ftp://ftp.ensembl.org/pub/release-93/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna.toplevel.fa.gz to cluster:\~/data/  
+All genes from http://useast.ensembl.org to biomart_genes.tsv  
 All transcripts from http://useast.ensembl.org to biomart_isoforms.tsv
 
 ### Other requirements
-github.com/scvannost/randompy/blob/master/DataFrameN.py
+github.com/scvannost/randompy/blob/master/DataFrameN.py  
 github.com/scvannost/randompy/blob/master/printer.py
