@@ -10,6 +10,13 @@ Code in support of my heat stroke project research under Dr. Doug Lauffenburger 
 6. Run log2scaled.py for handmade analysis
 7. Run zscored.py to zscore the data, then run relevant sections of log2scaled.py for handmade analysis
 
+## Group Analysis Methods
+1-4. Same as above
+5. Run first part of group_analysis.py for each group
+6. Run deseq_groups.R for each group
+7. Run second part of group_analysis.py for each group
+8. Run gsea.sh
+
 ### Other files
 helpers.py -> a file that makes all the imports needed to run log2scaled.py  
 mice.json -> a hand-coded JSON object specifying the experimental groups for each mouse
