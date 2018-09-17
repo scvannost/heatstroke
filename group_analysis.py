@@ -59,20 +59,9 @@ with open('heat_stroke/deseq/sac_control.cls','w') as f:
     
 # Run deseq_groups.R here
 
-ranked = pd.read_csv('heat_stroke/DEcondition.csv',index_col=0,usecols=[0,2,6])
-padj = np.array(ranked['padj'].fillna(1))
-
-check = [10**-((i+13)/10) for i in list(range(30)) + [40,50,60,70,80,90,100]]
-plt.plot(check,[sum(padj < i) for i in check])
-plt.axvline(0.05,c='r')
-plt.annotate(str(sum(padj < 0.05)),xy=(0.045, sum(padj < 0.05)))
-plt.axvline(0.001,c='r',linestyle=':')
-plt.annotate(str(sum(padj < 0.001)), xy=(0.001, sum(padj < 0.001)))
-plt.axhline(200,c='k',linestyle='--')
-plt.title('Condition for all')
-
 # make file for gsea
+ranked = pd.read_csv('heat_stroke/DEcondition.csv',index_col=0,usecols=[0,2,6])
 ranked.index = [i.upper() for i in ranked.index.values]
-idx = padj < 0.05
+idx = np.array(ranked['padj'].fillna(1)) < 0.05 # this sets cutoff
 with open('heat_stroke/deseq/condition_all_ranked.rnk','w') as f:
     f.write(ranked['log2FoldChange'][idx].fillna(0).to_csv(header=False,sep='\t'))
