@@ -18,7 +18,8 @@ mice.json -> a hand-coded JSON object specifying the experimental groups for eac
 ftp://ftp.ensembl.org/pub/release-93/gtf/mus_musculus/Mus_musculus.GRCm38.93.gtf.gz to cluster:\~/data/  
 ftp://ftp.ensembl.org/pub/release-93/fasta/mus_musculus/dna/Mus_musculus.GRCm38.dna.toplevel.fa.gz to cluster:\~/data/  
 All genes from http://useast.ensembl.org to biomart_genes.tsv  
-All transcripts from http://useast.ensembl.org to biomart_isoforms.tsv
+All transcripts from http://useast.ensembl.org to biomart_isoforms.tsv  
+http://software.broadinstitute.org/gsea/msigdb/download_file.jsp?filePath=/resources/msigdb/6.2/h.all.v6.2.symbols.gmt
 
 ### Other requirements
 github.com/scvannost/randompy/blob/master/DataFrameN.py  
